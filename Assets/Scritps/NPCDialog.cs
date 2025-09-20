@@ -24,7 +24,7 @@ public class NPCDialog : MonoBehaviour
     [Space(10), SerializeField]
     private string titleText;
 
-    [SerializeField]
+    [TextArea, SerializeField]
     private string messageText;
 
     [SerializeField]

@@ -1,9 +1,10 @@
 using UnityEngine;
 
 [RequireComponent(typeof(PlayerInput), typeof(CharacterMovement))]
-[RequireComponent(typeof(ProjectileThrower))]
+[RequireComponent(typeof(ProjectileThrower), typeof(DialogCloser))]
 public class PlayerController : MonoBehaviour
 {
+    public bool HasWeapon;
 
     private bool canMove;
     private bool canAttack;
@@ -11,20 +12,29 @@ public class PlayerController : MonoBehaviour
     private PlayerInput input;
     private CharacterMovement characterMovement;
     private ProjectileThrower projectileThrower;
+    private DialogCloser dialogCloser;
 
     private void Awake()
     {
         input = GetComponent<PlayerInput>();
         characterMovement = GetComponent<CharacterMovement>();
         projectileThrower = GetComponent<ProjectileThrower>();
+        dialogCloser = GetComponent<DialogCloser>();
         canMove = true;
-        canAttack = true;
+        canAttack = false;
+        projectileThrower.EnableProjectileRepresentation(false);
+
+        if (HasWeapon)
+        {
+            ReceiveWeapon();
+        }
     }
 
     private void FixedUpdate()
     {
         PlayerMove();
         PlayerAttack();
+        CloseDialog();
     }
 
     private void PlayerMove()
@@ -43,7 +53,6 @@ public class PlayerController : MonoBehaviour
         {
             return;
         }
-        
         if (input.AttackInput)
         {
             Vector2 direction = new(input.HorizontalInput, input.VerticalInput);
@@ -52,9 +61,30 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public void ReceiveWeapon()
+    {
+        canAttack = true;
+        projectileThrower.EnableProjectileRepresentation(canAttack);
+    }
+
     public void Enable(bool enable)
     {
+        input.AttackInput = false;
+
         canMove = enable;
-        canAttack = enable;
+
+        if (HasWeapon)
+        {
+            canAttack = enable;
+        }
+    }
+
+    public void CloseDialog()
+    {
+        if (input.InteractionInput)
+        {
+            dialogCloser.Close();
+            input.InteractionInput = false;
+        }
     }
 }

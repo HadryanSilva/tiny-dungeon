@@ -39,4 +39,14 @@ public class ProjectileThrower : MonoBehaviour
             projectileRepresentation.SetActive(false);
         }
     }
+
+    public void EnableProjectileRepresentation(bool enable)
+    {
+        if (projectileRepresentation == null)
+        {
+            return;
+        }
+        
+        projectileRepresentation.SetActive(enable);
+    }
 }
