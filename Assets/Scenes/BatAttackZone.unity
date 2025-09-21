@@ -3445,6 +3445,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerGroup
       objectReference: {fileID: 0}
+    - target: {fileID: 7519297404475601550, guid: c50294bf84bf0504b83af677c1a575de, type: 3}
+      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 823937999}
+    - target: {fileID: 7519297404475601550, guid: c50294bf84bf0504b83af677c1a575de, type: 3}
+      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ResetBatCount
+      objectReference: {fileID: 0}
     - target: {fileID: 7807402902658572362, guid: c50294bf84bf0504b83af677c1a575de, type: 3}
       propertyPath: dialogCanvas
       value: 

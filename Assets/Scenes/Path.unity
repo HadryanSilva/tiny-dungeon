@@ -3993,6 +3993,7 @@ GameObject:
   - component: {fileID: 1579407795}
   - component: {fileID: 1579407797}
   - component: {fileID: 1579407796}
+  - component: {fileID: 1579407798}
   m_Layer: 0
   m_Name: Foreground
   m_TagString: Untagged
@@ -4174,6 +4175,44 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!19719996 &1579407798
+TilemapCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1579407794}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_MaximumTileChangeCount: 1000
+  m_ExtrusionFactor: 0
+  m_UseDelaunayMesh: 0
 --- !u!1 &1585444621
 GameObject:
   m_ObjectHideFlags: 0
@@ -4293,11 +4332,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 35d1a639b1c20f449b0ffc575aceb312, type: 3}
---- !u!198 &1855401413 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 7916593825922802692, guid: 35d1a639b1c20f449b0ffc575aceb312, type: 3}
+--- !u!114 &1855401413 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5881005932631148138, guid: 35d1a639b1c20f449b0ffc575aceb312, type: 3}
   m_PrefabInstance: {fileID: 1855401412}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98c1b714d9b9b044183c1d9bf1467cc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DeathEffect
 --- !u!1001 &1880136065
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4632,6 +4677,10 @@ PrefabInstance:
       propertyPath: deathFx
       value: 
       objectReference: {fileID: 1855401413}
+    - target: {fileID: 2669201622143700832, guid: c50294bf84bf0504b83af677c1a575de, type: 3}
+      propertyPath: audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 39d95322e08d84fc88a217e689779f38, type: 3}
     - target: {fileID: 3138941513409883965, guid: c50294bf84bf0504b83af677c1a575de, type: 3}
       propertyPath: m_Name
       value: PlayerGroup

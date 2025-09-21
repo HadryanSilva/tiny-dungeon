@@ -5023,11 +5023,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!198 &1571710516 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 7916593825922802692, guid: 35d1a639b1c20f449b0ffc575aceb312, type: 3}
+--- !u!114 &1571710517 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5881005932631148138, guid: 35d1a639b1c20f449b0ffc575aceb312, type: 3}
   m_PrefabInstance: {fileID: 6897345930794848700}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98c1b714d9b9b044183c1d9bf1467cc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DeathEffect
 --- !u!1 &1579407794
 GameObject:
   m_ObjectHideFlags: 0
@@ -5536,6 +5542,17 @@ Transform:
   - {fileID: 1579407795}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2114051338 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5523594586695881387, guid: 9882074cd6df1744a8ae79ed5f284305, type: 3}
+  m_PrefabInstance: {fileID: 3929917357339836434}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06d918a558b20e2429583b515be6d26f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BatMission
 --- !u!1001 &682814035157594154
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6020,11 +6037,19 @@ PrefabInstance:
     - target: {fileID: 2669201622143700832, guid: c50294bf84bf0504b83af677c1a575de, type: 3}
       propertyPath: deathFx
       value: 
-      objectReference: {fileID: 1571710516}
+      objectReference: {fileID: 1571710517}
+    - target: {fileID: 2669201622143700832, guid: c50294bf84bf0504b83af677c1a575de, type: 3}
+      propertyPath: audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 39d95322e08d84fc88a217e689779f38, type: 3}
     - target: {fileID: 3138941513409883965, guid: c50294bf84bf0504b83af677c1a575de, type: 3}
       propertyPath: m_Name
       value: PlayerGroup
       objectReference: {fileID: 0}
+    - target: {fileID: 7519297404475601550, guid: c50294bf84bf0504b83af677c1a575de, type: 3}
+      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2114051338}
     - target: {fileID: 7807402902658572362, guid: c50294bf84bf0504b83af677c1a575de, type: 3}
       propertyPath: dialogCanvas
       value: 

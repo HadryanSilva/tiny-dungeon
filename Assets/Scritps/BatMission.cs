@@ -24,6 +24,11 @@ public class BatMission : MonoBehaviour
         }
     }
 
+    public void ResetBatCount()
+    {
+        BatKills = 0;
+    }
+
     public void AddBatKill()
     {
         BatKills++;

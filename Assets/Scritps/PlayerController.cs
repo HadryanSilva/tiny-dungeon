@@ -66,6 +66,7 @@ public class PlayerController : MonoBehaviour
 
     public void ReceiveWeapon()
     {
+        HasWeapon = true;
         canAttack = true;
         projectileThrower.EnableProjectileRepresentation(canAttack);
     }
