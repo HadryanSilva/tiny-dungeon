@@ -1,3 +1,4 @@
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 [RequireComponent(typeof(PlayerInput), typeof(CharacterMovement))]
@@ -5,6 +6,9 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public bool HasWeapon;
+
+    [SerializeField]
+    private Transform northRef, southRef, eastRef, westRef;
 
     private bool canMove;
     private bool canAttack;
@@ -85,6 +89,25 @@ public class PlayerController : MonoBehaviour
         {
             dialogCloser.Close();
             input.InteractionInput = false;
+        }
+    }
+
+    public void Spawn(DirectionEnum.Directions direction)
+    {
+        switch (direction)
+        {
+            case DirectionEnum.Directions.North:
+                transform.position = northRef.position;
+                break;
+            case DirectionEnum.Directions.South:
+                transform.position = southRef.position;
+                break;
+            case DirectionEnum.Directions.East:
+                transform.position = eastRef.position;
+                break;
+            case DirectionEnum.Directions.West:
+                transform.position = westRef.position;
+                break;
         }
     }
 }
