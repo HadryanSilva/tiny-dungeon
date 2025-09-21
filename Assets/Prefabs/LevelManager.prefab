@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5616856166485290960}
   - component: {fileID: 6457476020460308738}
   - component: {fileID: 7294731499182406449}
+  - component: {fileID: 5523594586695881387}
   m_Layer: 0
   m_Name: LevelManager
   m_TagString: Untagged
@@ -60,3 +61,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerWeaponUpdater
   playerController: {fileID: 0}
+--- !u!114 &5523594586695881387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2209374224269358215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06d918a558b20e2429583b515be6d26f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BatMission

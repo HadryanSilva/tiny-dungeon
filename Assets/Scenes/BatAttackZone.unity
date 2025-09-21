@@ -119,6 +119,74 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &26082689
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 26082691}
+  - component: {fileID: 26082690}
+  m_Layer: 0
+  m_Name: LevelDialog
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &26082690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 26082689}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d76d4ac497c5444ab5d6b2e687b724a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LevelDialog
+  OnStartDialog:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 585706785}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: Enable
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  dialogCanvas: {fileID: 1956992670}
+  title: {fileID: 1956992668}
+  message: {fileID: 1956992667}
+  image: {fileID: 1956992669}
+  titleText: "Miss\xE3o Completada!!"
+  messageText: "Parab\xE9ns! Voc\xEA derrotou a infesta\xE7\xE3o de morcegos. Volte
+    para o castelo!"
+  sprite: {fileID: -7945353237565122060, guid: f26088e2aaef2aa42a6946b2bdd13bec, type: 3}
+  tagToInteract: 
+--- !u!4 &26082691
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 26082689}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.42563, y: -2.77624, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &213838148
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -175,14 +243,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6166199188806119716, guid: 7f46cd0ec591acf45ad2fee32af23573, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 2.008
-      objectReference: {fileID: 0}
-    - target: {fileID: 6166199188806119716, guid: 7f46cd0ec591acf45ad2fee32af23573, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -3.31516
-      objectReference: {fileID: 0}
+    - target: {fileID: 5500923864328670197, guid: 7f46cd0ec591acf45ad2fee32af23573, type: 3}
+      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 823937999}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -282,6 +346,14 @@ PrefabInstance:
     - target: {fileID: 4531938964631802653, guid: 7f46cd0ec591acf45ad2fee32af23573, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5500923864328670197, guid: 7f46cd0ec591acf45ad2fee32af23573, type: 3}
+      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 823937999}
+    - target: {fileID: 5500923864328670197, guid: 7f46cd0ec591acf45ad2fee32af23573, type: 3}
+      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: AddBatKill
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3319,7 +3391,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3577965574505541947, guid: c50294bf84bf0504b83af677c1a575de, type: 3}
       propertyPath: HasWeapon
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3814363791353183410, guid: c50294bf84bf0504b83af677c1a575de, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3510,6 +3582,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5500923864328670197, guid: 7f46cd0ec591acf45ad2fee32af23573, type: 3}
+      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 823937999}
+    - target: {fileID: 5500923864328670197, guid: 7f46cd0ec591acf45ad2fee32af23573, type: 3}
+      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: AddBatKill
+      objectReference: {fileID: 0}
     - target: {fileID: 6166199188806119716, guid: 7f46cd0ec591acf45ad2fee32af23573, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.146
@@ -3579,6 +3659,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5500923864328670197, guid: 7f46cd0ec591acf45ad2fee32af23573, type: 3}
+      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 823937999}
+    - target: {fileID: 5500923864328670197, guid: 7f46cd0ec591acf45ad2fee32af23573, type: 3}
+      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: AddBatKill
+      objectReference: {fileID: 0}
     - target: {fileID: 6166199188806119716, guid: 7f46cd0ec591acf45ad2fee32af23573, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4
@@ -3644,6 +3732,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5500923864328670197, guid: 7f46cd0ec591acf45ad2fee32af23573, type: 3}
+      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 823937999}
+    - target: {fileID: 5500923864328670197, guid: 7f46cd0ec591acf45ad2fee32af23573, type: 3}
+      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: AddBatKill
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3691,6 +3787,42 @@ PrefabInstance:
     - target: {fileID: 2209374224269358215, guid: 9882074cd6df1744a8ae79ed5f284305, type: 3}
       propertyPath: m_Name
       value: LevelManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 5523594586695881387, guid: 9882074cd6df1744a8ae79ed5f284305, type: 3}
+      propertyPath: OnMissionComplete.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5523594586695881387, guid: 9882074cd6df1744a8ae79ed5f284305, type: 3}
+      propertyPath: OnMissionComplete.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5523594586695881387, guid: 9882074cd6df1744a8ae79ed5f284305, type: 3}
+      propertyPath: OnUpdateAfterMissionComplete.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5523594586695881387, guid: 9882074cd6df1744a8ae79ed5f284305, type: 3}
+      propertyPath: OnMissionComplete.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 26082690}
+    - target: {fileID: 5523594586695881387, guid: 9882074cd6df1744a8ae79ed5f284305, type: 3}
+      propertyPath: OnMissionComplete.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5523594586695881387, guid: 9882074cd6df1744a8ae79ed5f284305, type: 3}
+      propertyPath: OnMissionComplete.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Show
+      objectReference: {fileID: 0}
+    - target: {fileID: 5523594586695881387, guid: 9882074cd6df1744a8ae79ed5f284305, type: 3}
+      propertyPath: OnUpdateAfterMissionComplete.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5523594586695881387, guid: 9882074cd6df1744a8ae79ed5f284305, type: 3}
+      propertyPath: OnMissionComplete.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: LevelDialog, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5523594586695881387, guid: 9882074cd6df1744a8ae79ed5f284305, type: 3}
+      propertyPath: OnMissionComplete.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 5616856166485290960, guid: 9882074cd6df1744a8ae79ed5f284305, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3756,6 +3888,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 368717f4a6d6d074582999572dca4c86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerPositionUpdater
+--- !u!114 &823937999 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5523594586695881387, guid: 9882074cd6df1744a8ae79ed5f284305, type: 3}
+  m_PrefabInstance: {fileID: 823937997}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06d918a558b20e2429583b515be6d26f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BatMission
 --- !u!4 &883120771 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4531938964631802653, guid: 7f46cd0ec591acf45ad2fee32af23573, type: 3}
@@ -3865,6 +4008,14 @@ PrefabInstance:
     - target: {fileID: 4531938964631802653, guid: 7f46cd0ec591acf45ad2fee32af23573, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5500923864328670197, guid: 7f46cd0ec591acf45ad2fee32af23573, type: 3}
+      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 823937999}
+    - target: {fileID: 5500923864328670197, guid: 7f46cd0ec591acf45ad2fee32af23573, type: 3}
+      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: AddBatKill
       objectReference: {fileID: 0}
     - target: {fileID: 6166199188806119716, guid: 7f46cd0ec591acf45ad2fee32af23573, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4642,6 +4793,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5500923864328670197, guid: 7f46cd0ec591acf45ad2fee32af23573, type: 3}
+      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 823937999}
+    - target: {fileID: 5500923864328670197, guid: 7f46cd0ec591acf45ad2fee32af23573, type: 3}
+      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: AddBatKill
+      objectReference: {fileID: 0}
     - target: {fileID: 6166199188806119716, guid: 7f46cd0ec591acf45ad2fee32af23573, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.33
@@ -4793,6 +4952,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5500923864328670197, guid: 7f46cd0ec591acf45ad2fee32af23573, type: 3}
+      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 823937999}
+    - target: {fileID: 5500923864328670197, guid: 7f46cd0ec591acf45ad2fee32af23573, type: 3}
+      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: AddBatKill
+      objectReference: {fileID: 0}
     - target: {fileID: 6166199188806119716, guid: 7f46cd0ec591acf45ad2fee32af23573, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.68
@@ -4874,6 +5041,14 @@ PrefabInstance:
     - target: {fileID: 4531938964631802653, guid: 7f46cd0ec591acf45ad2fee32af23573, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5500923864328670197, guid: 7f46cd0ec591acf45ad2fee32af23573, type: 3}
+      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 823937999}
+    - target: {fileID: 5500923864328670197, guid: 7f46cd0ec591acf45ad2fee32af23573, type: 3}
+      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: AddBatKill
       objectReference: {fileID: 0}
     - target: {fileID: 6166199188806119716, guid: 7f46cd0ec591acf45ad2fee32af23573, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5244,6 +5419,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5500923864328670197, guid: 7f46cd0ec591acf45ad2fee32af23573, type: 3}
+      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 823937999}
+    - target: {fileID: 5500923864328670197, guid: 7f46cd0ec591acf45ad2fee32af23573, type: 3}
+      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: AddBatKill
+      objectReference: {fileID: 0}
     - target: {fileID: 6166199188806119716, guid: 7f46cd0ec591acf45ad2fee32af23573, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.86
@@ -5312,6 +5495,14 @@ PrefabInstance:
     - target: {fileID: 4531938964631802653, guid: 7f46cd0ec591acf45ad2fee32af23573, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5500923864328670197, guid: 7f46cd0ec591acf45ad2fee32af23573, type: 3}
+      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 823937999}
+    - target: {fileID: 5500923864328670197, guid: 7f46cd0ec591acf45ad2fee32af23573, type: 3}
+      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: AddBatKill
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5546,6 +5737,39 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e0deb414787279746989882f9e269d2b, type: 3}
+--- !u!114 &1956992667 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5146585140246909752, guid: e0deb414787279746989882f9e269d2b, type: 3}
+  m_PrefabInstance: {fileID: 1956992666}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+--- !u!114 &1956992668 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4288557667538844873, guid: e0deb414787279746989882f9e269d2b, type: 3}
+  m_PrefabInstance: {fileID: 1956992666}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+--- !u!114 &1956992669 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5629220194750881428, guid: e0deb414787279746989882f9e269d2b, type: 3}
+  m_PrefabInstance: {fileID: 1956992666}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
 --- !u!1 &1956992670 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6510350003655126493, guid: e0deb414787279746989882f9e269d2b, type: 3}
@@ -5658,6 +5882,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5500923864328670197, guid: 7f46cd0ec591acf45ad2fee32af23573, type: 3}
+      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 823937999}
+    - target: {fileID: 5500923864328670197, guid: 7f46cd0ec591acf45ad2fee32af23573, type: 3}
+      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: AddBatKill
+      objectReference: {fileID: 0}
     - target: {fileID: 6166199188806119716, guid: 7f46cd0ec591acf45ad2fee32af23573, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.59
@@ -5715,6 +5947,7 @@ SceneRoots:
   - {fileID: 619394802}
   - {fileID: 823937997}
   - {fileID: 1400460783}
+  - {fileID: 26082691}
   - {fileID: 1887839387}
   - {fileID: 234765449}
   - {fileID: 1918799705}

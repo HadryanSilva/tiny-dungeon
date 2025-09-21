@@ -1,42 +1,11 @@
-using System;
-using TMPro;
 using UnityEngine;
-using UnityEngine.Events;
-using UnityEngine.UI;
 
 [RequireComponent(typeof(Collider2D))]
-public class NPCDialog : MonoBehaviour
+public class NPCDialog : Dialog
 {
-    public UnityEvent OnStartDialog;
-
-    [SerializeField]
-    private GameObject dialogCanvas;
-
-    [SerializeField]
-    private TextMeshProUGUI title;
-
-    [SerializeField]
-    private TextMeshProUGUI message;
-
-    [SerializeField]
-    private Image image;
 
     [Space(10), SerializeField]
-    private string titleText;
-
-    [TextArea, SerializeField]
-    private string messageText;
-
-    [SerializeField]
-    private Sprite sprite;
-
-    [Space(10), SerializeField]
-    private string tagToInteract;
-
-    private void Start()
-    {
-        dialogCanvas.SetActive(false);
-    }
+    protected string tagToInteract;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -50,9 +19,5 @@ public class NPCDialog : MonoBehaviour
 
             dialogCanvas.SetActive(true);
         }
-
     }
-
-
-
 }
