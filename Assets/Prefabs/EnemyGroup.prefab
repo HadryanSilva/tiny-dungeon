@@ -300,6 +300,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DeathEffect
   deathFx: {fileID: 0}
+  audioClip: {fileID: 8300000, guid: effe6d71cfa2d4689a4262969473dd08, type: 3}
 --- !u!1 &3654588759405543712
 GameObject:
   m_ObjectHideFlags: 0

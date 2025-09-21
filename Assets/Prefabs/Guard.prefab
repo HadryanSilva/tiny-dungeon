@@ -164,3 +164,4 @@ MonoBehaviour:
   messageText: Saia daqui moleque!!!!
   sprite: {fileID: -2419274715696069116, guid: f26088e2aaef2aa42a6946b2bdd13bec, type: 3}
   tagToInteract: Player
+  audioClip: {fileID: 8300000, guid: 42ae225fdb1904702a92e22093424549, type: 3}

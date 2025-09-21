@@ -9,6 +9,9 @@ public class ProjectileThrower : MonoBehaviour
     [SerializeField]
     private GameObject projectileRepresentation;
 
+    [SerializeField]
+    private AudioClip audioClip;
+
     private Vector2 lastValidDirection;
 
     private void Start()
@@ -37,6 +40,11 @@ public class ProjectileThrower : MonoBehaviour
         if (projectileRepresentation != null)
         {
             projectileRepresentation.SetActive(false);
+        }
+
+        if(audioClip != null)
+        {
+            AudioSource.PlayClipAtPoint(audioClip, transform.position);
         }
     }
 

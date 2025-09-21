@@ -1,13 +1,17 @@
 using UnityEngine;
 
+[RequireComponent(typeof(ParticleSystem))]
 public class DeathEffect : MonoBehaviour
 {
-    [SerializeField]
-    private ParticleSystem deathFx;
-
-    public void Play()
+    private new ParticleSystem particleSystem;
+    private void Start()
     {
-        deathFx.transform.position = transform.position;
-        deathFx.Play();
+        particleSystem = GetComponent<ParticleSystem>();
+    }
+
+    public void Play(AudioClip audioClip)
+    {
+        particleSystem.Play();
+        AudioSource.PlayClipAtPoint(audioClip, transform.position);
     }
 }

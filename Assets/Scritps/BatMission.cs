@@ -14,7 +14,6 @@ public class BatMission : MonoBehaviour
 
     private void Start()
     {
-        Debug.Log($"Bat Mission Complete: {BatMissionComplete}");
         if (BatMissionComplete)
         {
             OnUpdateAfterMissionComplete?.Invoke();
