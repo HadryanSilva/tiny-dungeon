@@ -4,8 +4,8 @@ using UnityEngine.Events;
 [RequireComponent(typeof(Collider2D))]
 public class Damageable : MonoBehaviour
 {
-    public UnityEvent OnHit;
-    public UnityEvent OnDeath;
+    public UnityEvent onHit;
+    public UnityEvent onDeath;
 
     [SerializeField]
     private int life = 1;
@@ -16,11 +16,11 @@ public class Damageable : MonoBehaviour
 
         if (life > 0)
         {
-            OnHit?.Invoke();
+            onHit?.Invoke();
         }
         else
         {
-            OnDeath?.Invoke();
+            onDeath?.Invoke();
         }
     }
 }

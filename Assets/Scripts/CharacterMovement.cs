@@ -14,9 +14,9 @@ public class CharacterMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
-    public void Move(float HorizontalInput, float verticalInput)
+    public void Move(float horizontalInput, float verticalInput)
     {
-        Vector2 direction = new(HorizontalInput, verticalInput);
+        Vector2 direction = new(horizontalInput, verticalInput);
         rb.linearVelocity = direction * speed;
     }
 

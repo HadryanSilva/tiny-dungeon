@@ -3,24 +3,24 @@ using UnityEngine.Events;
 
 public class BatMission : MonoBehaviour
 {
-    public UnityEvent OnMissionComplete;
-    public UnityEvent OnUpdateAfterMissionComplete;
-    public UnityEvent OnMissionIncomplete;
+    public UnityEvent onMissionComplete;
+    public UnityEvent onUpdateAfterMissionComplete;
+    public UnityEvent onMissionIncomplete;
 
     public static bool BatMissionComplete;
     public static int BatKills;
 
-    private const int batKillsTarget = 12;
+    private const int BatKillsTarget = 12;
 
     private void Start()
     {
         if (BatMissionComplete)
         {
-            OnUpdateAfterMissionComplete?.Invoke();
+            onUpdateAfterMissionComplete?.Invoke();
         }
         else
         {
-            OnMissionIncomplete?.Invoke();
+            onMissionIncomplete?.Invoke();
         }
     }
 
@@ -33,10 +33,10 @@ public class BatMission : MonoBehaviour
     {
         BatKills++;
 
-        if (BatKills >= batKillsTarget)
+        if (BatKills >= BatKillsTarget)
         {
             BatMissionComplete = true;
-            OnMissionComplete?.Invoke();
+            onMissionComplete?.Invoke();
         }
     }
 }
